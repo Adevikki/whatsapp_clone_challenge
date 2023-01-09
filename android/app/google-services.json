@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "24037614646",
+    "project_id": "whatsapp-backend-f5025",
+    "storage_bucket": "whatsapp-backend-f5025.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24037614646:android:a8af847419aa2d59c2a497",
+        "android_client_info": {
+          "package_name": "com.example.whatsapp_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24037614646-fe12o7tdp2374c17s22gie4iimr5l531.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8Cqp-GdYURrTImv3cnGfjqAOJoRspyL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24037614646-fe12o7tdp2374c17s22gie4iimr5l531.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "24037614646-b52rrqho97lvqb2157bg08e0pdasl667.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.whatsappClone"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
