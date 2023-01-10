@@ -17,21 +17,21 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       case TargetPlatform.iOS:
+        return ios;
+      case TargetPlatform.macOS:
         throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
+          'DefaultFirebaseOptions have not been configured for macos - '
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
-      case TargetPlatform.macOS:
-        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -49,17 +49,15 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBTR2I0wISJfgzOY5if9O6eEwHLwwlTu_I',
-    appId: '1:24037614646:web:ef481417f76feeb2c2a497',
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyB8Cqp-GdYURrTImv3cnGfjqAOJoRspyL8',
+    appId: '1:24037614646:android:a8af847419aa2d59c2a497',
     messagingSenderId: '24037614646',
     projectId: 'whatsapp-backend-f5025',
-    authDomain: 'whatsapp-backend-f5025.firebaseapp.com',
     storageBucket: 'whatsapp-backend-f5025.appspot.com',
-    measurementId: 'G-GY0YWDZM6N',
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
+  static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBx9yHF3GapBrFi6Cln4jsmWz54vjlhHLQ',
     appId: '1:24037614646:ios:7626c9d93107aa8cc2a497',
     messagingSenderId: '24037614646',
